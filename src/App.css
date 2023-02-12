@@ -2,9 +2,18 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image1 {
+margin-top: 12pc;
+}
+
+.image2 {
+  margin-top: 12pc;
+}
+
+button {
+  width: 15.5pc;
+  box-shadow: 5px 5px 10px gray;
+  background-color: rgb(193, 151, 227);
 }
 
 @media (prefers-reduced-motion: no-preference) {

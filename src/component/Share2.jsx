@@ -1,16 +1,28 @@
-import React from 'react'
+import React from 'react';
 
-const Share2 = () => {
+
+function copyImage1(event) {
+    const element = event.target
+    const imageUrl = element.src
+    navigator.clipboard.writeText(imageUrl).then(function () {
+        alert('Copy done');
+    }, function (err) {
+        alert('Could not copy', err);
+    });
+
+}
+function Share2({ src, alt }) {
+
     return (
-        <div>
+        <div className='image2'>
+
+            <img src='https://interactly-images.s3.ap-south-1.amazonaws.com/temp/2.gif' alt='Anime-gif' width={250} height={250}></img>
             <div>
-                <img src='https://interactly-images.s3.ap-south-1.amazonaws.com/temp/2.gif' width={250} height={250}></img>
-                <div>
-                    <button>Copy Linked Gif 2</button>
-                </div>
+                <button onClick={copyImage1}>Copy Linked Gif 2</button>
             </div>
+
         </div>
-    )
+    );
 }
 
 export default Share2;
